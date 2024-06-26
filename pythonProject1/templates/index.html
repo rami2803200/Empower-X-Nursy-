@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Speech to Text and Text to Speech</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Speech to Text and Text to Speech</h1>
+    <button id="record">Record</button>
+    <button id="stop" disabled>Stop</button>
+    <form id="upload-form" enctype="multipart/form-data">
+        <label for="file">Or choose an audio file:</label>
+        <input type="file" id="file" name="file" accept="audio/*">
+        <input type="submit" value="Upload and Process">
+    </form>
+    <div id="transcript"></div>
+    <div id="audio"></div>
+<script src="static/js/script.js"></script>
+</body>
+</html>
